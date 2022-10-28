@@ -110,19 +110,17 @@ void Graph::removeNode(int id){
 
 bool Graph::searchNode(int id)
 {
-    
+    return NULL;
 }
 
 Node *Graph::getNode(int id)
 {
-
-    
+    return NULL; 
 }
-
 
 //Function that verifies if there is a path between two nodes
 bool Graph::depthFirstSearch(int initialId, int targetId){
-    
+    return NULL;
 }
 
 
@@ -132,34 +130,20 @@ void Graph::breadthFirstSearch(ofstream &output_file){
 
 
 Graph *Graph::getComplement(){
-    
+    return NULL;
 }
 
     
 
 //A function that returns a subjacent of a directed graph, which is a graph which the arcs have opposite directions to the original graph
 Graph* Graph::getSubjacent(){
-    
+    return NULL;
 }
 
 bool Graph::connectedGraph(){
-    
+    return NULL;
 }
-
-
 
 bool Graph::hasCircuit(){
-    
-}
-
-
-
-float** Graph::floydMarshall(){
-    
-}
-
-   
-
-float* Graph::dijkstra(int id){
-    
+    return NULL;
 }

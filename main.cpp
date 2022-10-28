@@ -104,16 +104,10 @@ int menu(){
 
     cout << "MENU" << endl;
     cout << "----" << endl;
-    cout << "[1] Complementar do grafo" << endl;
-    cout << "[2] Imprimir caminhamento em largura" << endl;
-    cout << "[3] Busca em profundidade" << endl;
-    cout << "[4] Imprimir componentes conexas" << endl;
-    cout << "[5] Imprimir componentes fortemente conexas" << endl;
-    cout << "[6] Imprimir ordenacao topológica" << endl;
-    cout << "[7] Árvore Geradora Mínima de Prim" << endl;
-    cout << "[8] Caminho Mínimo Dijkstra" << endl;
-    cout << "[9] Caminho Mínimo Floyd" << endl;
-    cout << "[10] Algoritmos Gulosos (Abre um submenu)" << endl;
+    cout << "[1] Grafo Interseção" << endl;
+    cout << "[2] Grafo União" << endl;
+    cout << "[3] Grafo Diferença" << endl;
+    cout << "[4] Rede Pert" << endl;
     cout << "[0] Sair" << endl;
 
     cin >> selecao;
@@ -126,68 +120,29 @@ void selecionar(int selecao, Graph* graph, ofstream& output_file){
 
     switch (selecao) {
 
-        //Complementar
+        // Grafo Interseção
         case 1:{
             
             break;
         }
 
-        //BFS
+        // Grafo União
         case 2:{
            
             break;
         }
 
-        //DFS
+        // Grafo Diferença
         case 3:{
             
             break;
         }
 
-        //Componentes Conexas
+        // Rede Pert
         case 4:{
 
             break;
         }
-
-        //Componentes Fortementes Conexas
-        case 5:{
-            
-            break;
-        }
-
-        //Ordenação Topológica
-        case 6:{
-            
-            break;
-        }
-
-        case 7:{
-
-            break;
-        }
-
-        //Algoritmo de Prim
-        case 8:
-        {
-            
-            break;
-        }
-
-        //Algoritmo de Dijkstra
-        case 9:
-        {
-            
-            break;
-        }
-
-        //Algoritmo de Floyd
-        case 10:
-        {
-            
-            break;
-
-    }
 
   }
 }
