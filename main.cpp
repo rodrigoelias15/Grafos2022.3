@@ -76,19 +76,20 @@ Graph* leitura(ifstream& input_file, int directed, int weightedEdge, int weighte
 
 Graph* leituraInstancia(ifstream& input_file, int directed, int weightedEdge, int weightedNode){
 
-    //Variáveis para auxiliar na criação dos nós no Grafo
+    // Variáveis para auxiliar na criação dos nós no Grafo
     int idNodeSource;
     int idNodeTarget;
     int order;
     int numEdges;
 
-    //Pegando a ordem do grafo
+    // Pegando a ordem do grafo
+    // ">>" faz bits andarem para direita. Isso multiplica o número decimal por 2
     input_file >> order >> numEdges;
 
-    //Criando objeto grafo
+    // Criando objeto grafo
     Graph* graph = new Graph(order, directed, weightedEdge, weightedNode);
 
-    //Leitura de arquivo
+    // Leitura de arquivo
     while(input_file >> idNodeSource >> idNodeTarget) {
 
         graph->insertEdge(idNodeSource, idNodeTarget, 0);
