@@ -95,7 +95,17 @@ Node *Graph::getLastNode()
 */
 void Graph::insertNode(int id)
 {
-    
+    bool v=searchNode(id);
+    if(v==false)
+    {
+    Node* n = new Node(id);
+    Node* aux = this->last_node;
+    aux->setNextNode(n);
+    this->last_node=n;
+    n->setPreviousNode(aux);
+    }
+    else
+    cout<<"Id ja tem";
 }
 
 void Graph::insertEdge(int id, int target_id, float weight)
@@ -104,46 +114,87 @@ void Graph::insertEdge(int id, int target_id, float weight)
     
 }
 
-void Graph::removeNode(int id){ 
-    
+void Graph::removeNode(int id)
+{ 
+    Node* n = getNode(id);
+    Node *auxp, *auxn;
+    auxp = n->getPreviousNode();
+    auxn = n->getNextNode();
+    auxp->setNextNode(auxn);
+    auxn->setPreviousNode(auxp);
 }
 
 bool Graph::searchNode(int id)
 {
-    return NULL;
+    Node *n= this->first_node;
+    while(n!=nullptr)
+    {
+        if(n->getId()==id)
+        return true;
+        else
+        n=n->getNextNode();
+    }
+    return false;
 }
 
 Node *Graph::getNode(int id)
 {
-    return NULL; 
-}
-
-//Function that verifies if there is a path between two nodes
-bool Graph::depthFirstSearch(int initialId, int targetId){
-    return NULL;
-}
-
-
-void Graph::breadthFirstSearch(ofstream &output_file){
+    Node *n= this->first_node;
+    while(n!=nullptr)
+    {
+        if(n->getId()==id)
+        return n;
+        else
+        n=n->getNextNode();
+    }
+    return nullptr;
     
 }
 
 
-Graph *Graph::getComplement(){
-    return NULL;
+//Function that verifies if there is a path between two nodes
+bool Graph::depthFirstSearch(int initialId, int targetId)
+{
+    return false;
+}
+
+
+void Graph::breadthFirstSearch(ofstream &output_file)
+{
+    
+}
+
+
+Graph *Graph::getComplement()
+{
+    return nullptr;
 }
 
     
 
 //A function that returns a subjacent of a directed graph, which is a graph which the arcs have opposite directions to the original graph
 Graph* Graph::getSubjacent(){
-    return NULL;
+    
 }
 
 bool Graph::connectedGraph(){
-    return NULL;
+    return false;
 }
 
+
+
 bool Graph::hasCircuit(){
-    return NULL;
+    return false;
+}
+
+
+
+float** Graph::floydMarshall(){
+    
+}
+
+   
+
+float* Graph::dijkstra(int id){
+    
 }

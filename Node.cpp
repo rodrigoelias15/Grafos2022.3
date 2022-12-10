@@ -18,6 +18,7 @@ Node::Node(int id){
     this->first_edge = nullptr;
     this->last_edge = nullptr;
     this->next_node = nullptr;
+    this->previous_node = nullptr;
 
 };
 
@@ -72,7 +73,10 @@ float Node::getWeight(){
     return this->weight;
 
 }
-
+Node* Node::getPreviousNode()
+{
+    return this->previous_node;
+}
 Node* Node::getNextNode(){
 
     return this->next_node;
@@ -85,6 +89,10 @@ void Node::setNextNode(Node* next_node){
 
     this->next_node = next_node;
 
+}
+void Node::setPreviousNode(Node* previous_node)
+{
+    this->previous_node = previous_node;
 }
 
 void Node::setWeight(float weight){

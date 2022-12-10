@@ -20,6 +20,7 @@ class Node{
         unsigned int out_degree;
         float weight;
         Node* next_node;
+        Node* previous_node;
 
     public:
         // Constructor
@@ -34,7 +35,9 @@ class Node{
         int getOutDegree();
         float getWeight();
         Node* getNextNode();
+        Node* getPreviousNode();
         // Setters
+        void setPreviousNode(Node* node);
         void setNextNode(Node* node);
         void setWeight(float weight);
         // Other methods
